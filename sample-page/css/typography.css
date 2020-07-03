@@ -1,0 +1,42 @@
+/* Import our font */
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Raleway:wght@300;400&display=swap');
+
+body {
+  font-family: 'Karla', sans-serif;
+
+  /* font size: default is usually 16px */
+  font-size: 18px; 
+  
+  /* line-height (called leading in print design); browser default is usually 1.2. Try for a minimum of 1.5, max should be less than 2 */
+  line-height: 1.7; 
+}
+
+/* heading text */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+
+header h1, 
+header h2, 
+header h3,
+header h4,
+header h5,
+header h6 {
+  font-variant: small-caps;
+  color: white;
+}
+
+footer {
+  text-align: center;
+}
+
+.text-box {
+  /* line length: max for print should be 80-95 characters; for web: aim for 75 or less */ 
+  max-width: 75ch;
+}
+
+.justify {
+  text-align: justify;
+}

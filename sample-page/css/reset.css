@@ -1,0 +1,15 @@
+/* Resets */
+/* https://necolas.github.io/normalize.css/ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}

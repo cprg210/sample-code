@@ -1,0 +1,4 @@
+.center-outside {
+  /* Center the text on screen; this assumes the element is less than 100% of the parent element. */
+  margin: auto;
+}

@@ -1,0 +1,66 @@
+/* CSS is for Presentation */
+
+/* Header Section  */
+header {
+  /* position the logo and title side-by-side */
+  display: flex;
+  justify-content: flex-start;
+  
+  /* Make it pretty */
+  margin: 0;
+  padding-left: 1em;
+  
+  background-color: rebeccapurple;
+
+}
+
+header h1 {
+  margin: 0;
+  padding: .5em;
+}
+
+header img {
+  /* Size the logo proportionally with font-size */
+  width: 3em;
+}
+
+/* Footer Section */
+
+footer {
+  padding: 1em;
+
+  background-color: grey;
+  color: white;
+}
+
+
+/* Main Section */
+
+main {
+
+  /* Push the text from the edge of narrow pages*/
+  padding: 0 1em;
+}
+
+
+main img {
+  /* Set the width; be careful when setting both `width` AND `height` as this may affect the aspect ratio of the image. */
+  width: 300px;
+  
+  /* Float the text around the image. */
+  float: left;
+  
+  /* Add a 1px keyline (print industry term) around the image. */
+  border: 1px solid black;
+  
+  /* Make the image a circle, assuming it started out as a square. */
+  border-radius: 50%;
+  
+  /* Float the text around the image in a circular shape. */
+  shape-outside: circle(50%);
+  
+  /* Tweak the alignment of the image. */
+  margin-left: -150px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
