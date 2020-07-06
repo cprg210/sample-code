@@ -27,13 +27,13 @@
     const button = document.querySelector('.btn');
 
     // Function to toggle a class name
-    function toggleBackground() {
+    function eventHandler() {
       console.log('clicked');
       body.classList.toggle('fancy-bg');
     }
 
     // Add event listener to `button`
-    button.addEventListener("click", toggleBackground);
+    button.addEventListener("click", eventHandler);
 
     // console.log(`${name} is ${age} years old.`);
     // console.error('error here');
