@@ -5,12 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Toggle</title>
   <style>
+    body {
+      margin: 0;
+    }
+
+    .btn {
+      padding: .5em 1em;
+    }
+
     .fancy-bg {
       background: rebeccapurple;
     }
   </style>
 </head>
-<body id="body">
-  
+<body class="one two three four">
+  <button class="btn">Hamburger Menu</button>
+  <p id="paragraph">This is a paragraph</p>
+  <script>
+    // Declare variables like this instead of adding an id attribute
+    const body = document.querySelector('body');
+    const button = document.querySelector('.btn');
+
+    // Function to toggle a class name
+    function toggleBackground() {
+      console.log('clicked');
+      body.classList.toggle('fancy-bg');
+    }
+
+    // Add event listener to `button`
+    button.addEventListener("click", toggleBackground);
+
+    // console.log(`${name} is ${age} years old.`);
+    // console.error('error here');
+    // console.warn('warning here');
+
+  </script>
 </body>
 </html>
