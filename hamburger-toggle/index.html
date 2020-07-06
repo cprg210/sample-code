@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburger Menu Toggle</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* Import a fancy font from Google Fonts */
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+    nav ul {
+      display: none;
+    }
+
+    nav ul.visible {
+      display: block;
+    }
+
+    @media (orientation: landscape) {
+      /* Apply these styles when the screen is in 'portrait' orientation */
+      nav ul {
+        display: flex;
+      }
+      nav ul li {
+        flex: auto;
+      }
+
+      nav button {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <button class="btn">Menu Toggle</button>
+    <ul>
+      <li id="fighter"><a href="#">Fighter</a></li>
+      <li id="barbarian"><a href="#">Barbarian</a></li>
+      <li id="bard"><a href="#">Bard</a></li>
+      <li id="rogue"><a href="#">Rogue</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const button = document.querySelector('.btn');
+    const menu = document.querySelector('nav ul');
+
+    console.log(button);
+    console.log(menu);
+
+    button.addEventListener('click', function() {
+      console.log('Menu is toggled');
+      menu.classList.toggle('visible');
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+    /********************/
+    /* Making it pretty */    
+    /********************/
+
+    body {
+      
+      background-color: lightgrey;
+      margin: auto 10vw;
+
+      font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+      font-variant: small-caps;
+      font-weight: bold;
+      font-size: 36px;
+    }
+
+    ul {
+      background-color: white;
+      border: 1px solid black;
+      padding: 0;
+    }
+
+    ul li {
+      list-style: none;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    a {
+      padding: 0.5em;
+      text-decoration: none;
+      color: indigo;
+    }
+
+    a:hover {
+      background-color: papayawhip;
+    }
+
+    /* This is a tricky one. Links are inline by default. We need to set them to block so that proper padding and width can be applied. */
+    a {
+      display: block;
+    }
+
