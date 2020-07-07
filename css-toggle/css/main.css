@@ -1,0 +1,20 @@
+/*************/
+/* Side Code */
+/*************/
+
+/* Reset */
+body {
+  margin: 0;
+}
+
+/* Layout */
+body {
+  /* Full viewport height */
+  min-height: 100vh;
+
+  /* Centre items horizonally and vertically within a flex
+ container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

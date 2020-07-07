@@ -3,29 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hamburger Menu Toggle</title>
+  <title>Sample Hamburger Menu Toggle</title>
+  <!-- Non-relevant styles -->
   <link rel="stylesheet" href="css/main.css">
   <style>
-    /* Import a fancy font from Google Fonts */
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
-
+    /* By default, hide menu on mobile (desktop is handled in the media query below) */
     nav ul {
       display: none;
     }
 
-    nav ul.visible {
+    .visible {
       display: block;
     }
 
     @media (orientation: landscape) {
-      /* Apply these styles when the screen is in 'portrait' orientation */
+      /* Apply these styles when the screen is in 'landscape' orientation (i.e. horizontal nav on desktop) */
       nav ul {
+        /* Horizontal nav on desktop */
         display: flex;
       }
+
       nav ul li {
+        /* This is a shorthand for `flex: 1 1 auto`. 
+        The items will grow to fill any empty space equally. */
         flex: auto;
       }
 
+      /* Don't show hamburger menu on desktop */
       nav button {
         display: none;
       }
@@ -37,24 +41,28 @@
   <nav>
     <button class="btn">Menu Toggle</button>
     <ul>
-      <li id="fighter"><a href="#">Fighter</a></li>
-      <li id="barbarian"><a href="#">Barbarian</a></li>
-      <li id="bard"><a href="#">Bard</a></li>
-      <li id="rogue"><a href="#">Rogue</a></li>
+      <li><a href="#">Fighter</a></li>
+      <li><a href="#">Barbarian</a></li>
+      <li><a href="#">Bard</a></li>
+      <li><a href="#">Rogue</a></li>
     </ul>
   </nav>
 
   <script>
+    // Declare our element variables
     const button = document.querySelector('.btn');
     const menu = document.querySelector('nav ul');
 
-    console.log(button);
-    console.log(menu);
+    // Define the function that will 
+    function eventHandler() {
+      // console.log('Menu is toggled');
 
-    button.addEventListener('click', function() {
-      console.log('Menu is toggled');
+      // This line of code runs only when `button` is clicked. The 'visible' class will the removed/added (or toggled) each time this event handler is invoked
       menu.classList.toggle('visible');
-    });
+    }
+
+    // The code in the `eventHandler` function (defined above) will be run (or "invoked") each time `button` is clicked
+    button.addEventListener('click', eventHandler);
 
   </script>
 </body>

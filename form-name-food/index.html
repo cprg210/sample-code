@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modifying Page Content with innerHTML via Web Form</title>
+</head>
+<body>
+  <h1>Hi, my name is: <span>[name]</span></h1>
+
+  <p>My favourite food is: <span>[food]</span></p>
+
+  <form action="#">
+    <fieldset>
+      <legend>What's your name and favourite food?</legend>
+      <section>
+        <div>
+          <label for="name">Nickname:</label>
+          <input id="name" type="text" placeholder="What do we call you?">
+        </div>
+        <div>
+          <label for="food">What's your favourite food?</label>
+          <select name="food" id="food">
+            <option value="kiwi">Kiwi</option>
+            <option value="A & W">A &amp; W</option>
+            <option value="pizza">Pizza</option>
+            <option value="fear">Fear</option>
+            <option value="yours">Your food</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit">Update</button>
+        </div>
+      </section>
+    </fieldset>
+  </form>
+  <script>
+    /* Define block element variables */
+    const heading = document.querySelector('h1');
+    const paragraph = document.querySelector('p');
+    const form = document.querySelector('form');
+
+    // Target the spans that will eventually hold the form data
+    const spanName = heading.querySelector('span');
+    const spanFood = paragraph.querySelector('span');
+
+    function formHandler(event) {
+      // console.log('Submitted');
+
+      // Stop form from submitting (we have no server to submit to, yet)
+      event.preventDefault();
+      
+      // Update the page text using form data
+      spanName.innerHTML = form.name.value;
+      spanFood.innerHTML = form.food.value;
+    }
+
+    form.addEventListener('submit', formHandler);
+  
+  </script>
+</body>
+</html>

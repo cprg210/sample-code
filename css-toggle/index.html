@@ -4,11 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Toggle</title>
+  <link rel="stylesheet" href="css/main.css">
   <style>
-    body {
-      margin: 0;
-    }
-
     .btn {
       padding: .5em 1em;
     }
@@ -18,11 +15,13 @@
     }
   </style>
 </head>
-<body class="one two three four">
-  <button class="btn">Hamburger Menu</button>
-    <script>
+<body>
+  <button class="btn">Toggle</button>
+  <script>
     // Declare variables like this instead of adding an id attribute
     const body = document.querySelector('body');
+    
+    // Any valid CSS selector works; it will return the first element it finds
     const button = document.querySelector('.btn');
     
     // Function to toggle a class name
@@ -34,11 +33,8 @@
     }
 
     // Add event listener to `button`
+    // `eventHandler` will only run when `button` is clicked
     button.addEventListener("click", eventHandler);
-
-    // console.log(`${name} is ${age} years old.`);
-    // console.error('error here');
-    // console.warn('warning here');
 
   </script>
 </body>
