@@ -44,17 +44,19 @@
     const spanName = heading.querySelector('span');
     const spanFood = paragraph.querySelector('span');
 
+    // Define the handler function that will run each time the form is submitted
     function formHandler(event) {
       // console.log('Submitted');
 
-      // Stop form from submitting (we have no server to submit to, yet)
+      // Stop form from actually submitting (we have no server to submit to, yet)
       event.preventDefault();
       
-      // Update the page text using form data
+      // Update the content of the span elements we targeted earlier based on the form data
       spanName.innerHTML = form.name.value;
       spanFood.innerHTML = form.food.value;
     }
 
+    // `formHandler` will be invoked each time the form is submitted (i.e. the submit button is clicked)
     form.addEventListener('submit', formHandler);
   
   </script>
