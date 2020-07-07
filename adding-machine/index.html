@@ -23,7 +23,7 @@
           <select name="operation" id="operation">
             <option value="add">Add</option>
             <option value="subtract">Subtract</option>
-            <option value="multiple">Multiply</option>
+            <option value="multiply">Multiply</option>
             <option value="divide">Divide</option>
           </select>
         </div>
@@ -38,19 +38,45 @@
 
     console.log(paragraph);
     function formHandler(event) {
+      
       event.preventDefault();
       // console.log(parseFloat(form.num1.value) + parseFloat(form.num2.value));
 
-      // Example result
-      paragraph.innerHTML = 'The sum is ' + parseFloat(form.num1.value) + parseFloat(form.num2.value) + '.';
+      let result; // Result of the mathematical operation
+      let glue; // make sentence grammatically correct
 
       // Objective 1: add if/then blocks to conditionally operate on num1 and num2 depending on the option selected in the `select` menu
+      if(form.operation.value == 'add') {
 
+        console.log('add');
+        result = form.num1.value + form.num2.value;
+        glue = 'plus';
+      
+      } else if (form.operation.value == 'subtract') {
+      
+        console.log('subtract');
+        result = form.num1.value - form.num2.value;
+        glue = 'minus';
+      
+      } else if (form.operation.value == 'multiply') {
+      
+        console.log('multiply');
+        result = form.num1.value * form.num2.value;
+        glue = 'times';
+
+      
+      } else {
+      
+        console.log('divide');
+        result = form.num1.value / form.num2.value;
+        glue = 'divided by';
+
+      }
 
       // Objective 2: Using string literals, print a statement in the following format:
       // `[number 1] [multiplied by|plus|minus|divided by] [number 2] equals [result]`
-
-
+ 
+      paragraph.innerHTML = `${form.num1.value} ${glue} ${form.num2.value} equals ${result}`;
     }
 
     form.addEventListener('submit', formHandler);
