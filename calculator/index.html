@@ -50,25 +50,25 @@
       if (form.operation.value === 'add') {
 
         console.log('add');
-        result = form.num1.value + form.num2.value;
+        result = parseFloat(form.num1.value) + parseFloat(form.num2.value);
         glue = 'plus';
 
       } else if (form.operation.value === 'subtract') {
 
         console.log('subtract');
-        result = form.num1.value - form.num2.value;
+        result = parseFloat(form.num1.value) - parseFloat(form.num2.value);
         glue = 'minus';
 
       } else if (form.operation.value === 'multiply') {
 
         console.log('multiply');
-        result = form.num1.value * form.num2.value;
+        result = parseFloat(form.num1.value) * parseFloat(form.num2.value);
         glue = 'times';
 
       } else if (form.operation.value === 'divide') {
 
         console.log('divide');
-        result = form.num1.value / form.num2.value;
+        result = parseFloat(form.num1.value) / parseFloat(form.num2.value);
         glue = 'divided by';
       
       } else {
