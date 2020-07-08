@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Image from Array</title>
+</head>
+<body>
+
+  <script>
+    // Need an array of image IDs
+    const imgList = [237, 433, 577, 582, 593, 659, 718, 783, 790, 837, 1024, 1025, 1074, 1084]; 
+    let imgTemplate;
+
+    // Random number between 0 and the array length minus 1
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    const rand = Math.floor(Math.random() * Math.floor(imgList.length));
+
+    // Build HTML img using the array
+    imgTemplate = `<img src="https://picsum.photos/id/${imgList[rand]}/250/250" alt="Random Lorem Picsum">`;
+
+    // Add and HTML string in JS -> body
+    document.querySelector('body').innerHTML = imgTemplate;
+
+  </script>
+</body>
+</html>
