@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop Basics</title>
+</head>
+<body>
+  
+  <script>
+
+    const cats = ['Bill', 'Jeff', [1,2,3,4,5], 'Biggles', 'Jasmin'];
+
+    /************************/
+    // for loop
+    /************************/
+    console.log('// for loop');
+
+    // 1st argument: initializer
+    // 2nd argument: condition
+    // 3rd final-expression
+    for (let i = 0; i < cats.length; i++) {
+      console.log(cats[i]);
+    }
+
+
+    /************************/
+    // forEach loop with named function
+    /************************/
+    console.log('// forEach loop with named function');
+    function loop(item) {
+      console.log(item);
+    }
+    
+    cats.forEach(loop);
+
+    
+    /************************/
+    // forEach loop with anonymous function    
+    /************************/
+    console.log('// forEach loop with anonymous function');
+
+    cats.forEach(function(item){
+      console.log(item);
+    });
+
+  </script>
+</body>
+</html>
