@@ -46,31 +46,33 @@
       let glue; // make sentence grammatically correct
 
       // Objective 1: add if/then blocks to conditionally operate on num1 and num2 depending on the option selected in the `select` menu
-      if(form.operation.value == 'add') {
+
+      if (form.operation.value === 'add') {
 
         console.log('add');
         result = form.num1.value + form.num2.value;
         glue = 'plus';
-      
-      } else if (form.operation.value == 'subtract') {
-      
+
+      } else if (form.operation.value === 'subtract') {
+
         console.log('subtract');
         result = form.num1.value - form.num2.value;
         glue = 'minus';
-      
-      } else if (form.operation.value == 'multiply') {
-      
+
+      } else if (form.operation.value === 'multiply') {
+
         console.log('multiply');
         result = form.num1.value * form.num2.value;
         glue = 'times';
 
-      
-      } else {
-      
+      } else if (form.operation.value === 'divide') {
+
         console.log('divide');
         result = form.num1.value / form.num2.value;
         glue = 'divided by';
-
+      
+      } else {
+        console.warn('Value not found.')
       }
 
       // Objective 2: Using string literals, print a statement in the following format:
