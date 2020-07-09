@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node: 
+    container_name: tech-careers
+    command: tail -f /dev/null
+    build: .
+    volumes:
+      - ./hello-express:/usr/src/app
+    ports:
+      - 3000:3000
+      - 8000:8000
