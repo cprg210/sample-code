@@ -1,3 +1,4 @@
+// Note: this is not valid js code
 [
   {
     id:           237,

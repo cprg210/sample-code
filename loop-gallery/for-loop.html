@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery with forEach</title>
+  <title>Dynamic Flexbox Gallery</title>
   <style>
     .gallery {
       display: flex;
@@ -29,17 +29,29 @@
 
     // Variable where we will store our img tags
     let imgTemplate = ''; 
-
+    
     // Flex container for images
     const gallery = document.querySelector('.gallery'); 
 
-    imgList.forEach(function(item){
-      console.log(item);
-      imgTemplate += `<img src="https://picsum.photos/id/${item}/250/250" alt="Random Lorem Picsum">`;
-    });
+    console.log(gallery);
+
+    // Let's run the loop!
+    // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code
+
+    for (let i = 0; i < imgList.length; i++) {
+      // This loop will run for every image in the list.
+
+      // imgTemplate gradually grows as each HTML img is added to the existing string
+
+      // imgTemplate = imgTemplate + `<img src="https://picsum.photos/id/${imgList[i]}/250/250" alt="Random Lorem Picsum">`;
+
+      // This is the same as the line above except using addition assignment operator
+      imgTemplate += `<img src="https://picsum.photos/id/${imgList[i]}/250/250" alt="Random Lorem Picsum">`;
+    }
 
     // Add HTML img string to gallery container
     gallery.innerHTML = imgTemplate;
-  </script>
+
+  </script>  
 </body>
 </html>

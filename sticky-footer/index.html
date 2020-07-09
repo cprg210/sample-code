@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"Sticky" Footer</title>
+  <style>
+    body {
+      /* reset */
+      margin: 0;
+    }
+    .wrapper {
+      /* Flex is used to push the footer to the bottom of the page. See declarations on <main> */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      /* Required for flex box to push footer to page bottom */
+      min-height: 100vh;
+    }
+
+    main {
+      /* tell flex item to fill any extra space. This pushes the footer down until container's min-height is reached */ 
+      flex-grow: 1;
+
+      margin: auto;
+      width: 50ch;
+    }
+    
+    header {
+      background: rebeccapurple;
+      padding: 1em;
+      color: white;
+      text-align: center;
+    }
+
+    footer {
+      background: grey;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Hello world!</h1>
+    </header>
+    <main>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores fuga exercitationem animi, blanditiis officiis quibusdam temporibus natus magni, repellat quas numquam totam voluptatum sapiente. Nemo reprehenderit odit, voluptate, accusantium quisquam ullam nam molestias sint dolore corporis commodi, labore maiores voluptatem quo doloribus. Cumque libero magni expedita non, laudantium officia molestiae?</p>
+    </main>
+    <footer>
+      &copy; 2020 Tony
+    </footer>
+  </div>
+</body>
+</html>

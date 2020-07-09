@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery with forEach</title>
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .gallery img {
+      margin: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <main class="gallery">
+    <!-- The gallery will go here. See the last line of JS to see how that happens. -->
+  </main>
+  <script>
+    // Image list extended with nested arrays.
+    const imgList = [
+      [237,'Puppy'],
+      [433,'Bear'],
+      [577,'Moose'],
+      [582,'Coyote'],
+      [593,'Tiger'],
+      [659,'Husky'],
+      [718,'Wolf'],
+      [783,'Monkey'],
+      [790,'Elk'],
+      [837,'Bulldog'],
+      [1024,'Bird'],
+      [1025,'Pug'],
+      [1074,'Big Cat'],
+      [1084,'Walrus']
+    ]; 
+
+    // Variable where we will store our img tags
+    let imgTemplate = ''; 
+
+    // Flex container for images
+    const gallery = document.querySelector('.gallery'); 
+
+    // Loop through items using forEach (available on every array)
+    imgList.forEach(function(item){
+      console.log(item);
+      imgTemplate += `<img src="https://picsum.photos/id/${item[0]}/250/250" alt="${item[1]}">`;
+    });
+
+    // Add HTML img string to gallery container
+    gallery.innerHTML = imgTemplate;
+
+</script>
+</body>
+</html>

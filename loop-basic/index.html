@@ -11,9 +11,9 @@
 
     const cats = ['Bill', 'Jeff', [1,2,3,4,5], 'Biggles', 'Jasmin'];
 
-    /************************/
-    // for loop
-    /************************/
+    /******************/
+    // classic for loop
+    /******************/
     console.log('// for loop');
 
     // 1st argument: initializer
@@ -24,9 +24,9 @@
     }
 
 
-    /************************/
+    /*********************************/
     // forEach loop with named function
-    /************************/
+    /*********************************/
     console.log('// forEach loop with named function');
     function loop(item) {
       console.log(item);
@@ -35,9 +35,9 @@
     cats.forEach(loop);
 
     
-    /************************/
+    /*************************************/
     // forEach loop with anonymous function    
-    /************************/
+    /*************************************/
     console.log('// forEach loop with anonymous function');
 
     cats.forEach(function(item){
