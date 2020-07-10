@@ -1,0 +1,23 @@
+/* reset */
+body {
+  margin: 0;
+}
+
+/* utilities */
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-vh {
+  min-height: 100vh;
+}
+
+/* typography */
+figcaption {
+  font-size: 24px;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: center;
+}

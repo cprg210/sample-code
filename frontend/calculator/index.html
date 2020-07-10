@@ -35,15 +35,16 @@
   <script>
     const form = document.querySelector('form');
     const paragraph = document.querySelector('p');
-
-    console.log(paragraph);
+    
+    // function statement with parameter
     function formHandler(event) {
-      
+      // Stop form from submitting
       event.preventDefault();
-      // console.log(parseFloat(form.num1.value) + parseFloat(form.num2.value));
 
-      let result; // Result of the mathematical operation
-      let glue; // make sentence grammatically correct
+      // Result of the mathematical operation
+      let result;
+      // Grammatical glue for the result
+      let glue;
 
       // Objective 1: add if/then blocks to conditionally operate on num1 and num2 depending on the option selected in the `select` menu
 
@@ -81,6 +82,7 @@
       paragraph.innerHTML = `${form.num1.value} ${glue} ${form.num2.value} equals ${result}`;
     }
 
+    // formHandler invoked when `form` is submitted
     form.addEventListener('submit', formHandler);
 
   </script>

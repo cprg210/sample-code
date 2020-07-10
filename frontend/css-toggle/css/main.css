@@ -2,19 +2,21 @@
 /* Side Code */
 /*************/
 
-/* Reset */
 body {
+  /* Reset */
   margin: 0;
-}
 
-/* Layout */
-body {
-  /* Full viewport height */
+  /* Layout */
+  /* full viewport height */
   min-height: 100vh;
 
-  /* Centre items horizonally and vertically within a flex
+  /* centre items horizonally and vertically within a flex
  container */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn {
+  padding: .5em 1em;
 }

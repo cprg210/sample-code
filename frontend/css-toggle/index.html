@@ -6,10 +6,6 @@
   <title>CSS Toggle</title>
   <link rel="stylesheet" href="css/main.css">
   <style>
-    .btn {
-      padding: .5em 1em;
-    }
-
     .fancy-bg {
       background: rebeccapurple;
     }
@@ -26,18 +22,14 @@
     
     // Function to toggle a class name
     function eventHandler() {
-      console.log('clicked');
 
       // If 'fancy-bg' exists, remove it; otherwise, add it
       body.classList.toggle('fancy-bg');
+
     }
 
-    // Add event listener to `button`
-    // `eventHandler` will only run when `button` is clicked
+    // `eventHandler` will be invoked when `button` is clicked
     button.addEventListener("click", eventHandler);
-
-    // console.error('error here');
-    // console.warn('warning here');
 
   </script>
 </body>
