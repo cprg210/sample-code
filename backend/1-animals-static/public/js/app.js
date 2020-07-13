@@ -146,7 +146,7 @@ const imgList = [
 ]; 
 
 // Variable where we will store our img tags
-let imgTemplate = ''; 
+let imgTemplate = '';
 
 // Flex container for images
 const gallery = document.querySelector('.gallery'); 
@@ -156,10 +156,10 @@ imgList.forEach(function(item){
   console.log(item);
   imgTemplate += 
     `<figure>
-    <a href="${item.title.toLowerCase()}.html">
-      <img src="images/sm/${item.fileName}" alt="${item.title}">
-    </a>
-    <figcaption>Hello ${item.title}!</figcaption>
+      <a href="${item.title.toLowerCase()}.html">
+        <img src="images/sm/${item.fileName}" alt="${item.title}">
+      </a>
+      <figcaption>Hello ${item.title}!</figcaption>
     </figure>`;
 });
 

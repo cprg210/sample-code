@@ -11,13 +11,15 @@ app.set('view engine', 'pug');
 // if yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Enpoint handler for the home page
 app.get('/', function(request, response){
   response.render('index.pug',{});
 })
 
-// app.get('/animals', function(request, response){
-//   response.json(animals);
-// })
+// Enpoint handler for the home page
+app.get('/hello-world', function(request, response){
+  response.render('hello-world.pug',{});
+})
 
 // if no, send a 404 error as a response to the browser
 app.use(function(req, res, next) {
