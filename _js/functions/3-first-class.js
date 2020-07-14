@@ -1,5 +1,5 @@
 // function expression (function statements are first-class too)
-var greet = function() {
+const greet = function() {
 	console.log('Hi!');
 }
 // function invoked

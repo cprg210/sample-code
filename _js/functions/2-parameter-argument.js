@@ -1,12 +1,12 @@
 // function expression
-var greetMe = function() {
+const greetMe = function() {
 	console.log('Hi!');
 }
 // function invoked
 greetMe();
 
 // function expression with parameter
-var greetMe = function(name) {
+const greetMe = function(name) {
 	console.log(`Hi, ${name}!`);
 }
 // function invoked with argument

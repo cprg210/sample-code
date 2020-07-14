@@ -6,7 +6,7 @@ function greet() {
 greet();
 
 // function expression
-var greetMe = function() {
+const greetMe = function() {
 	console.log('Hi Tony!');
 }
 // function invoked
@@ -16,3 +16,6 @@ greetMe();
 (function() {
   console.log('Who dis?');
 })()
+
+console.log(greet);
+console.log(greet());
