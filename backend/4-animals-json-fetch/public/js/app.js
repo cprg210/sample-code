@@ -39,4 +39,5 @@ fetch('http://localhost:3000/api/animals')
     gallery.innerHTML = imgTemplate;
 });
 
+// More code
 

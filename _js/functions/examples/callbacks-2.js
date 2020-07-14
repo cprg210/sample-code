@@ -1,21 +1,23 @@
-function greet(lang) {
-  if (lang == 'en') {
+// Callback: a function passed to another function to be invoked at a later time.
 
-    console.log('Hi');
+const greet = function(callback) {
+  // Pretend we're retrieving a name from the database...
+  const name = 'Tony';
 
-  } else if (lang == 'es') {
-
-    console.log('Hola!');
-
-  } else {
-
-    console.log('language not found');
-
-  }
+  callback(name);
 }
 
-greet('en'); 
-greet('es');
+const casual = function(name) {
+  console.log(`Hi ${name}!`);
+}
+const formal = function(name) {
+  console.log(`Hello, Mr. ${name}.`);
+}
 
-console.log(greet);
+greet(casual);
 
+greet(formal);
+
+greet(function(name) {
+  console.log(`This is my on-the-fly greeting. Doesn't even have a variable name (btw, ${name} was here)`);
+});
