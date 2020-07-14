@@ -1,0 +1,14 @@
+
+/* gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  max-width: 1024px;
+  margin: auto;
+}
+
+.gallery > * {
+  margin: 0.5em;
+}
