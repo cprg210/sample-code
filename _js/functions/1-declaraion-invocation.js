@@ -1,6 +1,7 @@
 // function statement
 function greet() {
-	console.log('Hi!');
+  console.log('Hi!');
+  // return 'returned';
 }
 // function invoked
 greet();

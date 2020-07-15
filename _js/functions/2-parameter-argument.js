@@ -5,11 +5,11 @@ const greetMe = function() {
 // function invoked
 greetMe();
 
-// function expression with parameter
+// function expression with parameter (variable name)
 const greetMe = function(name) {
 	console.log(`Hi, ${name}!`);
 }
-// function invoked with argument
+// function invoked with argument (value)
 greetMe('Tony');
 
 // passing an argument to an immediately invoked function expression (IIFE)
