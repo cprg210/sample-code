@@ -17,16 +17,27 @@ app.get('/', function(request, response){
   response.render('animal-list',{});
 })
 
+app.get('/destinations/:title', function(request, response) {
+  console.log(request.params);
+  // Get invoice info from database using ID
+  const oneDestination = ''; // Some db call? request.params.title
+  response.send('Thanks!');
+})
 
 // Setup many repetitive GET endpoints for each animal. Obviously there has to be a better way!
-app.get('/:id', function(request, response){
+app.get('/:title', function(request, response){
 
   const oneAnimal = animals.find(function(item) {
-    return item.id == request.params.id;
+    return item.title.toLowerCase() == request.params.title;
   });
+
+  if (!oneAnimal) {
+    return response.send('Invalid ID.');
+  }
 
   response.render('animal-single',oneAnimal);
 })
+
 
 // if no file or endpoint found, send a 404 error as a response to the browser
 app.use(function(req, res, next) {
