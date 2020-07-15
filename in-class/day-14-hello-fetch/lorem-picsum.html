@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello fetch()!</title>
+</head>
+<body>
+  <main>
+
+  </main>
+  <script>
+    const main = document.querySelector('main');
+
+    fetch('https://picsum.photos/v2/list')
+      .then(function(response) {
+        console.log(response);
+        return response.json();
+      })
+      .then(function(data) {
+        // Any code that needs `data` should be in this code block.
+        console.log(data);
+        let imgTemplate = '';
+
+        data.forEach(function(item){
+          console.log(item);
+          imgTemplate += 
+            `<figure>
+            <a href="${item.download_url}">
+              <img src="https://picsum.photos/id/${item.id}/250" alt="${item.author}">
+            </a>
+            <figcaption>Hello <a href="${item.url}">${item.author}</a>!</figcaption>
+            </figure>`;
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });;
+
+        main.innerHTML = imgTemplate;
+      });
+    
+      console.log('Done executing main process.');
+  </script>
+</body>
+</html>

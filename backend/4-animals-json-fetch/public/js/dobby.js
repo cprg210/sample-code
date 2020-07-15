@@ -14,9 +14,9 @@ fetch('http://localhost:3000/api/animals')
   .then(function(response) {
     return response.json();
   })
-  .then(function(data) {
+  .then(function(animals) {
 
-    const imgList = data;
+    const imgList = animals;
 
     // Variable where we will store our img tags
     let imgTemplate = ''; 
