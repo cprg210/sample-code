@@ -32,11 +32,10 @@
             <figcaption>Hello <a href="${item.url}">${item.author}</a>!</figcaption>
             </figure>`;
         })
-        .catch((error) => {
-          console.error('Error:', error);
-        });;
 
         main.innerHTML = imgTemplate;
+      }).catch((error) => {
+        console.error('Error:', error);
       });
     
       console.log('Done executing main process.');
