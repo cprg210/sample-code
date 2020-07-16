@@ -3,11 +3,9 @@ const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
-// const animals = require('./animals');
 
 // Models
-const Gallery = require('./models/gallery.js');
-const animals = require('../sample-code/in-class/day13-require-custom-module/animals.js');
+const Animal = require('./models/animal.js');
 
 // Hide creds from repo
 const mongoDB = process.env.MONGODB_URL;
@@ -44,7 +42,7 @@ app.get('/:id', function(request, response){
 
   // model.findOne returns the first object it finds
   // model.find will always return an array, even if it only finds one 
-  Gallery.findOne({'id': request.params.id}, function(error, animal) {
+  Animal.findOne({'id': request.params.id}, function(error, animal) {
   
     // Check for IDs that are not in our list
     if (!animal) {
@@ -62,13 +60,11 @@ app.get('/api/animals', function(request, response){
 
   // response.json(animals);
 
-  Gallery.find(function(error, result) { 
-    response.json(result);
+  Animal.find(function(error, animals) { 
+    response.json(animals);
   });
 
 })
-
-
 
 // if no file or endpoint found, send a 404 error as a response to the browser
 app.use(function(req, res, next) {
